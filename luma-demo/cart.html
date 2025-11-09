@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Cart • LumaShop</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand"><a href="index.html"><span class="logo">Luma<span>Shop</span></span></a></div>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="cart.html">Cart <span id="cart-count-badge">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container cart-page">
+    <h1>Your Cart</h1>
+    <div id="cartArea">
+      <!-- cart items injected by JS -->
+    </div>
+    <div class="cart-actions">
+      <button class="btn btn-ghost" onclick="clearCart()">Clear Cart</button>
+      <button class="btn btn-primary" onclick="checkout()">Checkout</button>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 LumaShop</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+

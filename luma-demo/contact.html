@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact • LumaShop</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand"><a href="index.html"><span class="logo">Luma<span>Shop</span></span></a></div>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container contact-page">
+    <h1>Contact</h1>
+    <p>For pitch deck / demo requests, use the form below (this is a static demo; form does not submit).</p>
+
+    <form onsubmit="event.preventDefault(); alert('Thanks — we will contact you (demo).');">
+      <label>Name</label>
+      <input type="text" placeholder="Your name" required>
+      <label>Email</label>
+      <input type="email" placeholder="name@example.com" required>
+      <label>Message</label>
+      <textarea placeholder="Short message..." rows="5"></textarea>
+      <div style="margin-top:12px;">
+        <button class="btn btn-primary" type="submit">Send</button>
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 LumaShop</p>
+    </div>
+  </footer>
+</body>
+</html>
+
