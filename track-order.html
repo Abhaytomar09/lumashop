@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Track Order • LumaShop</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    #map { height: 520px; width: 100%; border-radius: 8px; box-shadow: 0 8px 24px rgba(12,17,23,0.08); }
+    .track-info { margin-top: 16px; display:flex; gap:20px; align-items:center; justify-content:space-between; flex-wrap:wrap; }
+    .pill { background:#f3f6ff; padding:10px 14px; border-radius:999px; color:#1e3a8a; font-weight:600; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand"><a href="index.html"><span class="logo">Luma<span>Shop</span></span></a></div>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="track-order.html">Track Order</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Track Your Order</h1>
+    <p>Simulated live tracking for demo purposes.</p>
+
+    <div id="map"></div>
+
+    <div class="track-info">
+      <div class="pill" id="statusPill">Status: On the way</div>
+      <div>
+        <strong>Estimated arrival:</strong> <span id="eta">~20 mins</span>
+      </div>
+      <div style="display:flex;gap:8px;">
+        <a class="btn btn-ghost" onclick="simulateDelay()">Simulate Delay</a>
+        <a class="btn btn-ghost" onclick="resetTracking()">Reset Demo</a>
+      </div>
+    </div>
+    
+    <div style="margin-top:20px;padding:16px;background:#f8fafc;border-radius:8px;font-size:14px;color:#475569;">
+      <strong>📍 Route Details:</strong>
+      <ul style="margin:8px 0 0 20px;padding:0;">
+        <li><span style="color:#10b981;">📦 Green marker</span> = Warehouse (origin)</li>
+        <li><span style="color:#7c3aed;">🚚 Purple marker</span> = Delivery vehicle (moving)</li>
+        <li><span style="color:#ef4444;">🏠 Red marker</span> = Your location (destination)</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 LumaShop</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
